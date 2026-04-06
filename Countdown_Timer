@@ -1,0 +1,11 @@
+import time
+
+def countdown_timer():
+    try:
+        # Ask for input in minutes for convenience
+        user_input = input("Enter time in minutes (or seconds with 's'): ")
+        
+        if user_input.endswith('s'):
+            seconds = int(user_input[:-1])
+        else:
+            seconds = int(float(user_input) * 60)
