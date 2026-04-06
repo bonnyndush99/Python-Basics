@@ -9,3 +9,13 @@ def countdown_timer():
             seconds = int(user_input[:-1])
         else:
             seconds = int(float(user_input) * 60)
+print("\nTimer starting now...")
+
+        while seconds >= 0:
+            # Divmod calculates minutes and remaining seconds
+            mins, secs = divmod(seconds, 60)
+            
+            # {:02d} ensures 2-digit padding (e.g., 05:09 instead of 5:9)
+            # end="\r" forces the cursor back to the start of the line
+            timer_display = f"{mins:02d}:{secs:02d}"
+            print(f"Time Remaining: {timer_display}", end="\r")
