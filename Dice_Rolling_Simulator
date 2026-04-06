@@ -1,0 +1,25 @@
+import random
+import time
+
+def roll_dice():
+    print("Rolling the dice", end="")
+    
+    # Add a little "suspense" animation
+    for _ in range(3):
+        time.sleep(0.4)
+        print(".", end="", flush=True)
+    
+    result = random.randint(1, 6)
+    
+    # Add a simple ASCII visual for the dice face
+    dice_faces = {
+        1: "[ . ]", 2: "[ : ]", 3: "[.:.]", 
+        4: "[: :]", 5: "[:.:]", 6: "[:::]"
+    }
+    
+    print(f"\n\nResult: {dice_faces[result]} ({result})")
+    
+    if result == 6:
+        print("Jackpot! 🎲")
+
+roll_dice()
