@@ -19,3 +19,12 @@ print("\nTimer starting now...")
             # end="\r" forces the cursor back to the start of the line
             timer_display = f"{mins:02d}:{secs:02d}"
             print(f"Time Remaining: {timer_display}", end="\r")
+  time.sleep(1)
+            seconds -= 1
+
+        print("\n\nTime’s up! 🔔")
+        
+    except ValueError:
+        print("Please enter a valid number.")
+
+countdown_timer()
